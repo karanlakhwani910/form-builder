@@ -1,0 +1,29 @@
+.tools{
+    border-radius: 5px;
+    background-color: rgb(228, 228, 228);
+    font-size: 140%;
+    padding: 1% 2%;
+    width: 300px;
+    margin: 5% auto 1%;
+    
+}
+
+.tools h2{
+    text-align: center;
+    
+}
+
+.tools ul{
+    padding-left: 0 !important;
+    list-style-type: none;
+}
+
+
+.tools .tool{
+    border: 1px solid rgb(105, 105, 105);
+    background-color: rgb(236, 236, 236);
+    color: rgb(37, 37, 37);
+    padding: 1%;
+    margin: 4% 0.5% 0%;
+    border-radius: 5px;
+}

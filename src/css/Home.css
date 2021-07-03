@@ -1,0 +1,9 @@
+.home-page{
+    margin: 2% 0;
+}
+
+.home-page button{
+    display: block;
+    width: 100px;
+    margin: 4% auto 0;
+}

@@ -1,0 +1,17 @@
+.dropbox{
+    background-color: rgb(238, 238, 238);
+    padding: 2% 4% 6%;
+    border-radius: 10px;
+}
+
+.dropbox h2{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.dropbox .drop-items{
+    min-height: 300px;
+    border: 1px dashed rgb(80, 80, 80);
+    border-radius: 10px;
+    padding: 3% 4%;
+}
