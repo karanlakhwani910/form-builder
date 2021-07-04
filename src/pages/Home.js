@@ -8,7 +8,6 @@ import DropBox from '../components/Dropbox'
 
 // import Modules
 import { Link } from 'react-router-dom'
-import { useState } from "react";
 
 
 const Home = (props) => {
