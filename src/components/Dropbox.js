@@ -30,7 +30,7 @@ const Dropbox = (props) => {
     useEffect(()=>{
         const myprops = () => props.getForm(Tools)
         myprops();
-    },[Tools, myprops])
+    },[Tools])
 
 
     const drop = (e) => {
