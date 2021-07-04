@@ -2,9 +2,9 @@
     border-radius: 5px;
     background-color: rgb(228, 228, 228);
     font-size: 140%;
-    padding: 1% 2%;
+    padding: 2% 5%;
     width: 300px;
-    margin: 5% auto 1%;
+    margin: 2.5rem auto .5rem;
     
 }
 
@@ -21,9 +21,10 @@
 
 .tools .tool{
     border: 1px solid rgb(105, 105, 105);
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(255, 255, 255);
     color: rgb(37, 37, 37);
-    padding: 1%;
+    padding: 1% 2%;
     margin: 4% 0.5% 0%;
     border-radius: 5px;
+    cursor: all-scroll;
 }

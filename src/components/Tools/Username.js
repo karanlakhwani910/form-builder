@@ -3,7 +3,7 @@ const Username = () => {
     <div>
       <label>Username</label>
       <br />
-      <input type="text" id="username" name="username"></input>
+      <input type="text" id="username-field" name="username"></input>
     </div>
   );
 };

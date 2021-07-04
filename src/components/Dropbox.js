@@ -1,49 +1,69 @@
+// import from modules
+import { useState } from 'react';
+
 // import Styles
 import '../css/Dropbox.css';
 
 // import Components
 import Username from './Tools/Username'
+import Password from './Tools/Password';
+import Email from './Tools/Email';
+
 
 
 const Dropbox = () => {
 
 
-
-    let elementId = 0;
-    let Tools = [
-        <Username></Username>,
-
+    const customTools = [
+        <Email></Email>, <Username></Username>, <Password></Password>
     ];
-    console.log(Tools[0]);
+
+    const [Tools, setTools] = useState([]);
 
     const drop = (e) => {
         e.preventDefault();
         const data = e.dataTransfer.getData("form-field");
         let nodeCopy = document.getElementById(data).cloneNode(true);
-        
-        // console.log(nodeCopy);
-        // console.log(Username);
-        
-        nodeCopy.id = elementId; 
-        e.target.appendChild(nodeCopy);
 
-        elementId++;
+        renderTool(nodeCopy.id);
     }
 
     const allowDrop = (e) => {
         e.preventDefault();
     }
 
+    const renderTool = (id) =>{
+        if(id === 'email'){
+            setTools(Tools => [...Tools, customTools[0]])
+        }
+        else if(id === 'username'){
+            setTools(Tools => [...Tools, customTools[1]])
+        }
+        else{
+            setTools(Tools => [...Tools, customTools[2]])
+        }
+    }
 
+    console.log(Tools);
+
+    let id = -1;
 
     return ( 
         <div className='dropbox'>
             <h2>Drop Box</h2>
+            
             <div className='drop-items' onDrop={drop} onDragOver={allowDrop}>
-
+                {Tools.map((item)=>
+                    
+                    {   id++;
+                        return(
+                        <div key={id} id={`form-field-${id}`} className='form-field'>
+                            {item}
+                        </div>
+                    )}
+                )}
             </div>
         </div>
      );
 }
- 
 export default Dropbox;

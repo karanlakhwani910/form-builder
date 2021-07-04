@@ -6,6 +6,10 @@ import '../css/Home.css';
 import Tools from "../components/Tools";
 import DropBox from '../components/Dropbox'
 
+// import Modules
+import { Link } from 'react-router-dom'
+
+
 const Home = () => {
     return ( 
         <div className='home-page'>
@@ -20,7 +24,10 @@ const Home = () => {
                 </Row>
             </Container>
 
-            <Button variant='dark'>Render</Button>
+            <Link to='/render'>
+                <Button variant='dark'>Preview</Button>
+            </Link>
+            
         </div>
      );
 }

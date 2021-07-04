@@ -1,24 +1,29 @@
 // import Styles
 import '../css/Tools.css'
 
+
 const Tools = () => {
 
     const tools = [
         {
             name:'email',
             type:'email',
-            label:'Email'
-        },
-        {
-            name:'password',
-            type:'password',
-            label:'Password'
+            label:'Email',
+            className: 'far fa-envelope'
         },
         {
             name:'username',
             type:'text',
-            label:'Username'
+            label:'Username',
+            className:'far fa-user'
+        },
+        {
+            name:'password',
+            type:'password',
+            label:'Password',
+            className:'far fa-lock'
         }
+        
     ];
 
     const drag = (e) => {
@@ -32,10 +37,12 @@ const Tools = () => {
                 {tools.map((tool)=>{
                     return(
                         <li id={tool.name} draggable='true' onDragStart={drag} key={tool.name} className='tool'>
+                            <i className={tool.className}></i>&nbsp;
                             {tool.label}
                         </li>
                     )
                 })}
+                
             </ul>
         </div>
      );
