@@ -25,9 +25,10 @@ const Dropbox = (props) => {
     const [Tools, setTools] = useState([]);
 
 
-    const myprops = () => props.getForm(Tools)
+    
 
     useEffect(()=>{
+        const myprops = () => props.getForm(Tools)
         myprops();
     },[Tools, myprops])
 
