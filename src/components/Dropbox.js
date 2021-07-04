@@ -44,7 +44,7 @@ const Dropbox = () => {
         }
     }
 
-    console.log(Tools);
+
 
     let id = -1;
 
