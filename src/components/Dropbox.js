@@ -13,25 +13,15 @@ import Email from './Tools/Email';
 
 const Dropbox = (props) => {
 
-
-    
-
-
-
     const customTools = [
         <Email></Email>, <Username></Username>, <Password></Password>
     ];
 
     const [Tools, setTools] = useState([]);
 
-
-    
-
     useEffect(()=>{
-        const myprops = () => props.getForm(Tools)
-        myprops();
+        props.getForm(Tools)
     },[Tools])
-
 
     const drop = (e) => {
         e.preventDefault();
@@ -57,7 +47,7 @@ const Dropbox = (props) => {
         }
     }
 
-    
+    console.log(props.tools1);
 
     let id = -1;
 

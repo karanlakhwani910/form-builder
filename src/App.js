@@ -14,12 +14,13 @@ function App() {
 
   const [Tools, setTools] = useState([]);
 
+
   return (
     <div>
       <Router>
         <Switch>
           <Route exact path='/'>
-            <Home getForm = {Tools=>setTools(Tools)}></Home>
+            <Home tools1={Tools} getForm = {Tools=>setTools(Tools)}></Home>
           </Route>
           <Route path='/render'>
             {Tools}
