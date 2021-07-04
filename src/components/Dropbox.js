@@ -1,5 +1,5 @@
 // import from modules
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // import Styles
 import '../css/Dropbox.css';
@@ -11,7 +11,11 @@ import Email from './Tools/Email';
 
 
 
-const Dropbox = () => {
+const Dropbox = (props) => {
+
+
+    
+
 
 
     const customTools = [
@@ -20,10 +24,17 @@ const Dropbox = () => {
 
     const [Tools, setTools] = useState([]);
 
+
+
+    useEffect(()=>{
+        props.getForm(Tools)
+    },[Tools])
+
+
     const drop = (e) => {
         e.preventDefault();
         const data = e.dataTransfer.getData("form-field");
-        let nodeCopy = document.getElementById(data).cloneNode(true);
+        let nodeCopy = document.getElementById(data);
 
         renderTool(nodeCopy.id);
     }
@@ -44,7 +55,7 @@ const Dropbox = () => {
         }
     }
 
-
+    
 
     let id = -1;
 

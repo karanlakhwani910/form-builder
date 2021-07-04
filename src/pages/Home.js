@@ -8,15 +8,18 @@ import DropBox from '../components/Dropbox'
 
 // import Modules
 import { Link } from 'react-router-dom'
+import { useState } from "react";
 
 
-const Home = () => {
+const Home = (props) => {
+
+
     return ( 
         <div className='home-page'>
             <Container>
                 <Row>
                     <Col lg={8}>
-                        <DropBox></DropBox>
+                        <DropBox {...props}></DropBox>
                     </Col>
                     <Col lg={3}>
                         <Tools></Tools>
