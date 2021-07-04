@@ -8,13 +8,14 @@ import '../css/Dropbox.css';
 import Username from './Tools/Username'
 import Password from './Tools/Password';
 import Email from './Tools/Email';
+import Submit from './Tools/Submit';
 
 
 
 const Dropbox = ({getForm}) => {
 
     const customTools = [
-        <Email></Email>, <Username></Username>, <Password></Password>
+        <Email></Email>, <Username></Username>, <Password></Password>, <Submit></Submit>
     ];
 
     const [Tools, setTools] = useState([]);
@@ -42,8 +43,11 @@ const Dropbox = ({getForm}) => {
         else if(id === 'username'){
             setTools(Tools => [...Tools, customTools[1]])
         }
-        else{
+        else if(id === 'password'){
             setTools(Tools => [...Tools, customTools[2]])
+        }
+        else{
+            setTools(Tools => [...Tools, customTools[3]])
         }
     }
 

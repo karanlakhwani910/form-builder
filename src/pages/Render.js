@@ -1,11 +1,14 @@
+// import Styles
+import '../css/Render.css'
+import { Container } from 'react-bootstrap';
 
-
-
-const Render = () => {
+const Render = (props) => {
     return ( 
-        <div>
-            
-        </div>
+        <Container className='render-form'>
+            <form action="submit">
+                {props.form}
+            </form>
+        </Container>
      );
 }
  

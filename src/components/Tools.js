@@ -22,6 +22,12 @@ const Tools = () => {
             type:'password',
             label:'Password',
             className:'far fa-lock'
+        },
+        {
+            name:'submit',
+            type:'submit',
+            label:'Submit',
+            className:'fas fa-check-circle'
         }
         
     ];

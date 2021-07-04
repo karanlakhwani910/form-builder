@@ -12,7 +12,7 @@ import Render from './pages/Render';
 
 function App() {
 
-  const [Tools, setTools] = useState([]);
+  const [Form, setForm] = useState([]);
 
 
   return (
@@ -20,11 +20,10 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/'>
-            <Home tools1={Tools} getForm = {Tools=>setTools(Tools)}></Home>
+            <Home form={Form} getForm = {Form=>setForm(Form)}></Home>
           </Route>
           <Route path='/render'>
-            {Tools}
-            <Render></Render>
+            <Render form={Form}></Render>
           </Route>
         </Switch>
       </Router>
