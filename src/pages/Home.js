@@ -1,5 +1,5 @@
 // import Styles
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import '../css/Home.css';
 
 // import Components
@@ -26,9 +26,6 @@ const Home = (props) => {
                 </Row>
             </Container>
 
-            {/* <Link to='/render'>
-                <Button variant='dark'>Preview</Button>
-            </Link> */}
             <div className='render-link'>
                 <Link to='/render'>Preview</Link>
             </div>
