@@ -1,4 +1,25 @@
-.render-form{
-    width: 100%;
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% auto 0;
+    
+}
+
+.form input{
     margin: 3% auto;
+}
+
+
+
+.final-form .link-home{
+    text-align: center;
+    margin: 3% auto;
+}
+
+
+.final-form a{
+    text-decoration: underline;
+    color: black;
+    
 }

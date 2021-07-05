@@ -26,9 +26,13 @@ const Home = (props) => {
                 </Row>
             </Container>
 
-            <Link to='/render'>
+            {/* <Link to='/render'>
                 <Button variant='dark'>Preview</Button>
-            </Link>
+            </Link> */}
+            <div className='render-link'>
+                <Link to='/render'>Preview</Link>
+            </div>
+            
             
         </div>
      );

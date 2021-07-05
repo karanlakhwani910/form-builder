@@ -2,13 +2,20 @@
     margin: 2% 0;
 }
 
-.home-page a{
-    text-decoration: none;
+.home-page .render-link{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.home-page button{
-    font-size: 140%;
-    margin: 4% auto 0;
+    margin-top: 3%;
+}   
+
+
+.home-page .render-link a{
+    background-color: rgb(46, 46, 46);
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.3rem 0.75rem;
+    border-radius: 5px;
 }
