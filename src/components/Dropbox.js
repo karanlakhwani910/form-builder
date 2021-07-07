@@ -20,7 +20,7 @@ const Dropbox = ({getInputs}) => {
 
     useEffect(()=>{
         getInputs(inputs)
-    },[ inputs ])
+    },[ inputs, getInputs ])
 
     const drop = (e) => {
         e.preventDefault();
@@ -60,7 +60,6 @@ const Dropbox = ({getInputs}) => {
     }
 
 
-
     return ( 
         <div className='dropbox'>
             <h2>Drop Box</h2>
@@ -71,54 +70,55 @@ const Dropbox = ({getInputs}) => {
                     inputs.map((input)=>{
                         if (input === 'fname') {
                             return (
-                                <div className='form-field'>
-                                    <FirstName key={input}></FirstName>
+                                <div key={input} className='form-field'>
+                                    <FirstName ></FirstName>
                                 </div>
                             )
                         }
                         else if(input === 'lname'){
                             return (
-                                <div className='form-field'>
-                                    <LastName key={input}></LastName>
+                                <div key={input} className='form-field'>
+                                    <LastName ></LastName>
                                 </div>
                             )
                         }
                         
                         else if(input === 'email'){
                             return (
-                                <div className='form-field'>
-                                    <Email key={input}></Email>
+                                <div key={input} className='form-field'>
+                                    <Email ></Email>
                                 </div>
                             )
                         }
                         else if(input === 'username'){
                             return (
-                                <div className='form-field'>
-                                    <Username key={input}></Username>
+                                <div key={input} className='form-field'>
+                                    <Username ></Username>
                                 </div>
                             )
                         }
                         else if(input === 'contact'){
                             return (
-                                <div className='form-field'>
-                                    <Contact key={input}></Contact>
+                                <div key={input} className='form-field'>
+                                    <Contact ></Contact>
                                 </div>
                             )
                         }
                         else if(input === 'password'){
                             return (
-                                <div className='form-field'>
-                                    <Password key={input}></Password>
+                                <div key={input} className='form-field'>
+                                    <Password ></Password>
                                 </div>
                             )
                         }
                         else if(input === 'submit'){
                             return (
-                                <div className='form-field'>
-                                    <Submit key={input}></Submit>
+                                <div key={input} className='form-field'>
+                                    <Submit ></Submit>
                                 </div>
                             )
                         }
+                        return null;
                     })
                 }
             </div>

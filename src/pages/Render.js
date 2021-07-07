@@ -45,6 +45,8 @@ const Render = ({ inputs }) => {
         case('contact'):
           setDetails(details => [...details, contact])
           break;
+        default:
+          
       }
     
     }
@@ -57,50 +59,51 @@ const Render = ({ inputs }) => {
           {inputs.map((input) => {
             if (input === "fname") {
               return (
-                <div className="form-field">
+                <div key={input} className="form-field">
                   <FirstName
                     getFname={(first) => setFirst(first)}
-                    key={input}
+                    
                   ></FirstName>
                 </div>
               );
             } else if (input === "lname") {
               return (
-                <div className="form-field">
-                  <LastName getLname={(last)=>setLast(last)} key={input}></LastName>
+                <div key={input} className="form-field">
+                  <LastName getLname={(last)=>setLast(last)} ></LastName>
                 </div>
               );
             } else if (input === "email") {
               return (
-                <div className="form-field">
-                  <Email getEmail={(email)=> setEmail(email)} key={input}></Email>
+                <div key={input} className="form-field">
+                  <Email getEmail={(email)=> setEmail(email)} ></Email>
                 </div>
               );
             } else if (input === "username") {
               return (
-                <div className="form-field">
-                  <Username getUsername={username => setUsername(username)} key={input}></Username>
+                <div key={input} className="form-field">
+                  <Username getUsername={username => setUsername(username)} ></Username>
                 </div>
               );
             } else if (input === "contact") {
               return (
-                <div className="form-field">
-                  <Contact getPhone = {(contact) => setContact(contact)} key={input}></Contact>
+                <div key={input} className="form-field">
+                  <Contact getPhone = {(contact) => setContact(contact)} ></Contact>
                 </div>
               );
             } else if (input === "password") {
               return (
-                <div className="form-field">
-                  <Password key={input}></Password>
+                <div key={input} className="form-field">
+                  <Password ></Password>
                 </div>
               );
             } else if (input === "submit") {
               return (
-                <div className="form-field">
-                  <Submit getDetails={getDetails} key={input}></Submit>
+                <div key={input} className="form-field">
+                  <Submit getDetails={getDetails} ></Submit>
                 </div>
               );
             }
+            return null
           })}
         </div>
       </div>
@@ -117,29 +120,30 @@ const Render = ({ inputs }) => {
               inputs.map((input)=>{
                 if(input === 'fname'){
                   return (
-                    <th>First Name</th>
+                    <th key={input}>First Name</th>
                   )
                 }
                 else if(input === 'lname'){
                   return (
-                    <th>Last Name</th>
+                    <th key={input}>Last Name</th>
                   )
                 }
                 else if(input === 'email'){
                   return (
-                    <th>Email</th>
+                    <th key={input}>Email</th>
                   )
                 }
                 else if(input === 'username'){
                   return (
-                    <th>Username</th>
+                    <th key={input}>Username</th>
                   )
                 }
                 else if(input === 'contact'){
                   return (
-                    <th>Phone</th>
+                    <th key={input}>Phone</th>
                   )
                 }
+                return null
               })
             }
           </tr>
@@ -148,7 +152,7 @@ const Render = ({ inputs }) => {
           <tr>
             {details.map((detail)=>{
               return(
-                <td>
+                <td key={detail}>
                   {detail}
                 </td>
               )

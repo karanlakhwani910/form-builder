@@ -1,6 +1,6 @@
 const Password = () => {
   return (
-    <div>
+    <div >
       <label>Password</label>
       <br />
       <input type="password" id="password-field" name="password"></input>
