@@ -6,6 +6,18 @@ const Tools = () => {
 
     const tools = [
         {
+            name:'fname',
+            type:'text',
+            label:'FirstName',
+            className:'fas fa-signature'
+        },
+        {
+            name:'lname',
+            type:'text',
+            label:'LastName',
+            className:'fas fa-signature'
+        },
+        {
             name:'email',
             type:'email',
             label:'Email',
@@ -22,6 +34,14 @@ const Tools = () => {
             type:'password',
             label:'Password',
             className:'far fa-lock'
+        },
+
+        
+        {
+            name:'contact',
+            type:'number',
+            label:'Contact',
+            className:'fas fa-phone-alt'
         },
         {
             name:'submit',

@@ -1,7 +1,10 @@
-const Submit = () => {
+const Submit = ({getDetails}) => {
+
+    
+
     return ( 
         <div>
-            <input type="button" value='Submit' />
+            <input type="button" onClick={getDetails} value='Submit'/>
         </div>
      );
 }
