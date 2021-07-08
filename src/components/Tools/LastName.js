@@ -1,14 +1,14 @@
-const LastName = ({getLname}) => {
+const LastName = ({getLastName}) => {
 
-  const getLastName = (e) => {
-    getLname(e.target.value) ;
+  const lastName = (e) => {
+    getLastName(e.target.value) ;
   }
 
   return (
     <div>
       <label>Last Name</label>
       <br />
-      <input type="text" id="last-name" name="last-name" onChange={getLastName}></input>
+      <input type="text" id="last-name" name="last-name" onChange={lastName}></input>
     </div>
   );
 };
