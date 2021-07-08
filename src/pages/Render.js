@@ -1,6 +1,5 @@
 // import Styles
 import "../css/Render.css";
-import { Table, Container } from "react-bootstrap";
 
 // import Modules
 import { Link } from "react-router-dom";
@@ -14,6 +13,11 @@ import Username from "../components/Tools/Username";
 import Contact from "../components/Tools/Contact";
 import Password from "../components/Tools/Password";
 import Submit from "../components/Tools/Submit";
+import Result from "../components/Result";
+
+
+
+
 
 const Render = ({ inputs }) => {
   const [first, setFirst] = useState("");
@@ -24,6 +28,11 @@ const Render = ({ inputs }) => {
 
   const [details, setDetails] = useState([]);
 
+
+
+  // get Details from form in details array
+  // the function is linked to submit component
+  
   const getDetails = () => {
     setDetails([]);
     for (let input of inputs) {
@@ -48,10 +57,14 @@ const Render = ({ inputs }) => {
     }
   };
 
+
+
+
   return (
     <div className="final-form">
       <div className="form">
         <div>
+          
           {inputs.map((input) => {
             if (input === "fname") {
               return (
@@ -107,35 +120,8 @@ const Render = ({ inputs }) => {
         </div>
       </div>
 
-      <Container>
-        <Table striped bordered hover size="sm">
-          <thead>
-            <tr>
-              {inputs.map((input) => {
-                if (input === "fname") {
-                  return <th key={input}>First Name</th>;
-                } else if (input === "lname") {
-                  return <th key={input}>Last Name</th>;
-                } else if (input === "email") {
-                  return <th key={input}>Email</th>;
-                } else if (input === "username") {
-                  return <th key={input}>Username</th>;
-                } else if (input === "contact") {
-                  return <th key={input}>Phone</th>;
-                }
-                return null;
-              })}
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              {details.map((detail) => {
-                return <td key={detail}>{detail}</td>;
-              })}
-            </tr>
-          </tbody>
-        </Table>
-      </Container>
+      
+      <Result inputs={inputs} details={details}></Result>
 
       <div className="link-home">
         <Link to="/">Go back to home page</Link>
