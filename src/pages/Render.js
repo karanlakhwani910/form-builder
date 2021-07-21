@@ -72,6 +72,7 @@ const Render = ({ inputs }) => {
                   <FirstName
                     getFirstName={(first) => setFirst(first)}
                   ></FirstName>
+                  
                 </div>
               );
             } else if (input === "lname") {
